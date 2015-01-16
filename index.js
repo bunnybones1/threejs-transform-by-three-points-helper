@@ -21,7 +21,10 @@ function TransformByThreePointsHelper(pointAnchor, pointLookAt, pointAlignTo) {
 		var handle = new THREE.Mesh(
 			ballGeometry,
 			new THREE.MeshBasicMaterial({
-				color: colors[i]
+				color: colors[i],
+				depthTest: false,
+				transparent: true,
+				blending: THREE.AdditiveBlending
 			})
 		);
 		handle.renderDepth = 1;
